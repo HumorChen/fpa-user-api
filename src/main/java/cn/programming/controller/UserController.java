@@ -4,6 +4,7 @@ import cn.freeprogramming.params.LoginParam;
 import cn.freeprogramming.vo.result.R;
 import cn.programming.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,4 +25,12 @@ public class UserController {
     public R login(@RequestBody @Validated LoginParam loginParam){
         return userService.login(loginParam);
     }
+
+    @RequestMapping("test")
+    @Cacheable(key = "#id")
+    public R find(long id){
+        return R.success("缓存成功");
+    }
+
+
 }
