@@ -29,7 +29,7 @@ public class UserController {
     @RequestMapping("test")
     @Cacheable(key = "#id")
     public R find(long id){
-        return R.success("缓存成功");
+        return R.success("cache success");
     }
 
 

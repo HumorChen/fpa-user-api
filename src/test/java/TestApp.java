@@ -20,6 +20,7 @@ public class TestApp {
     @Test
     public void test1(){
 //        redisTemplate.opsForValue().set("test","idea test");
+//        redisTemplate.opsForValue().set("a","1");
         System.out.println("查询结果："+redisTemplate.keys("*"));
     }
 
