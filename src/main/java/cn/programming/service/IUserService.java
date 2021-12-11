@@ -1,6 +1,9 @@
 package cn.programming.service;
 
 import cn.freeprogramming.params.LoginParam;
+import cn.freeprogramming.params.ModifySelfInfoParam;
+import cn.freeprogramming.params.RegisterParam;
+import cn.freeprogramming.params.RetrieveParam;
 import cn.freeprogramming.vo.result.R;
 
 /**
@@ -14,5 +17,26 @@ public interface IUserService {
      * @param loginParam
      * @return
      */
-    R login(LoginParam loginParam);
+    R login(LoginParam loginParam, String lastOnlineIp);
+
+    /**
+     * 注册
+     * @param registerParam
+     * @return
+     */
+    R register(RegisterParam registerParam);
+
+    /**
+     * 找回密码
+     * @param retrieveParam
+     * @return
+     */
+    R retrieve(RetrieveParam retrieveParam);
+
+    /**
+     * 修改个人信息
+     * @param modifySelfInfoParam
+     * @return
+     */
+    R modifySelfInfo(ModifySelfInfoParam modifySelfInfoParam);
 }
