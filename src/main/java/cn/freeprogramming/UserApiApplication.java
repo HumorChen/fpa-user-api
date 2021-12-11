@@ -1,4 +1,4 @@
-package cn.programming;
+package cn.freeprogramming;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

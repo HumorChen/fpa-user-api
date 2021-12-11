@@ -1,9 +1,9 @@
-import cn.programming.UserApiApplication;
+import cn.freeprogramming.dao.RedisDao;
+import cn.freeprogramming.UserApiApplication;
+import cn.freeprogramming.cache.UserCacheKey;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -14,14 +14,16 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = UserApiApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TestApp {
 
-    @Autowired
-    private RedisTemplate redisTemplate;
 
     @Test
     public void test1(){
 //        redisTemplate.opsForValue().set("test","idea test");
 //        redisTemplate.opsForValue().set("a","1");
-        System.out.println("查询结果："+redisTemplate.keys("*"));
+        UserCacheKey userCacheKey = new UserCacheKey(1);
+        RedisDao.set(userCacheKey,"hello");
+        System.out.println();
+        System.out.println("keys："+ RedisDao.keys("*"));
+        System.out.println("query:"+RedisDao.get(userCacheKey,String.class));
     }
 
 }

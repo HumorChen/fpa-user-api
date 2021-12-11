@@ -1,9 +1,9 @@
-package cn.programming.service.impl;
+package cn.freeprogramming.service.impl;
 
 import cn.freeprogramming.facade.IUserFacade;
 import cn.freeprogramming.params.LoginParam;
 import cn.freeprogramming.vo.result.R;
-import cn.programming.service.IUserService;
+import cn.freeprogramming.service.IUserService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Service;
 

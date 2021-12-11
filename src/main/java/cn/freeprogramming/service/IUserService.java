@@ -1,4 +1,4 @@
-package cn.programming.service;
+package cn.freeprogramming.service;
 
 import cn.freeprogramming.params.LoginParam;
 import cn.freeprogramming.vo.result.R;

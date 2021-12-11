@@ -1,8 +1,8 @@
-package cn.programming.controller;
+package cn.freeprogramming.controller;
 
 import cn.freeprogramming.params.LoginParam;
 import cn.freeprogramming.vo.result.R;
-import cn.programming.service.IUserService;
+import cn.freeprogramming.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.validation.annotation.Validated;
